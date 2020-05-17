@@ -5,9 +5,9 @@
    "type": "postgres",
    "host": "localhost",
    "port": 5432,
-   "username": "postgres",
-   "password": "test123*",
-   "database": "foodordermohan",
+   "username": "username",
+   "password": "****",
+   "database": "db name",
    "entities": ["src/**/*.entity{.ts,.js}"],
    "migrations": [
       "src/migration/**/*.ts"

@@ -31,6 +31,7 @@ Install the dependencies and devDependencies and start the server.
 ```sh
 $ npm i -g @nestjs/cli
 $ git clone https://github.com/mohan210782/sqashor-order-food.git
+$ cd sqash-order-food
 $ npm install
 ```
 
