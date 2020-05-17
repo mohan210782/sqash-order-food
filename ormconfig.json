@@ -1,0 +1,23 @@
+{
+  
+   "logging": false,
+   "name": "default",
+   "type": "postgres",
+   "host": "localhost",
+   "port": 5432,
+   "username": "postgres",
+   "password": "test123*",
+   "database": "foodordermohan",
+   "entities": ["src/**/*.entity{.ts,.js}"],
+   "migrations": [
+      "src/migration/**/*.ts"
+   ],
+   "subscribers": [
+      "src/subscriber/**/*.ts"
+   ],
+   "cli": {
+      "entitiesDir": "src/entity",
+      "migrationsDir": "src/migration",
+      "subscribersDir": "src/subscriber"
+   }
+}
