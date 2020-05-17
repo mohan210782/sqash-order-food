@@ -8,6 +8,10 @@ import { FoodsModule} from './foods/foods.module';
 import { IngredientsModule } from './ingredients/ingredients.module';
 import { Order} from './enitity/orders.entity';
 import { getMaxListeners } from 'cluster';
+
+require('dotenv').config();
+
+
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   const options = new DocumentBuilder()
@@ -27,6 +31,6 @@ const document = SwaggerModule.createDocument(app, options, {
 });
 SwaggerModule.setup('api', app, document);
 app.useLogger(await app.resolve(LoggerService));
-  await app.listen(3002);
+  await app.listen(process.env.PORT);
 }
 bootstrap();
