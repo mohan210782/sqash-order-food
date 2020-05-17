@@ -28,35 +28,43 @@ Order Food requires Postgres v11.4 to run.
 Order Food requires Nest.js v7+ to run.
 
 Install the dependencies and devDependencies and start the server.
-
 ```sh
 $ npm i -g @nestjs/cli
-$ git clone https://github.com/mohan210782/sqash-order-food.git
+$ git clone https://github.com/mohan210782/sqashor-order-food.git
 $ npm install
 ```
 
-Configure DB: open .env file 
+Configure DB: Create  .env file in the root and add the following
 
 ```sh
 POSTGRES_HOST=127.0.0.1
 POSTGRES_PORT=5432
-POSTGRES_USER=user
-POSTGRES_PASSWORD=pass
-POSTGRES_DATABASE=DB name
+POSTGRES_USER=<Your DB Username>
+POSTGRES_PASSWORD=<Your DB Password>
+POSTGRES_DATABASE=<Your DB Name>
 PORT=3000
 MODE=DEV
 RUN_MIGRATIONS=true
 ```
 
-DB Migration : Run the following comments to migrate the DB
+DB Migration : 
+Open ormconfig.json in the root and cnage the following lines with you data
 ```sh
-$ npm run typeorm:migration:generate
+"host": "localhost",
+"port": 5432,
+"username": "db username",
+"password": "***",
+"database": "db name",
+```
+
+Run the following comments to migrate the DB
+```sh
+$ npm run typeorm:migration:generate -n myinit
 $ npm run typeorm:migration:run
 ```
 
 If you dont want to migrate, skip the above migration comments and create db and restore the .bak file 
 ```sh
-$ CREATE DATABASE Dbname
 $ psql -U username dbname < foodorder.pgsql
 ```
 
