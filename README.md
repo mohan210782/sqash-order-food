@@ -49,7 +49,7 @@ RUN_MIGRATIONS=true
 ```
 
 DB Migration : 
-Open ormconfig.json in the root and cnage the following lines with you data
+Open ormconfig.json and change the following lines with you data
 ```sh
 "host": "localhost",
 "port": 5432,
@@ -58,13 +58,13 @@ Open ormconfig.json in the root and cnage the following lines with you data
 "database": "db name",
 ```
 
-Run the following comments to migrate the DB
+Run the following commands to migrate the DB
 ```sh
 $ npm run typeorm:migration:generate -n myinit
 $ npm run typeorm:migration:run
 ```
 
-If you dont want to migrate, skip the above migration comments and create db and restore the .bak file 
+If you dont want to migrate, skip the above migration commands and then create new db and restore the .psql file  which is located in the root.
 ```sh
 $ psql -U username dbname < foodorder.pgsql
 ```
