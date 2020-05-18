@@ -23,9 +23,7 @@ Order Food Api is used to place order for Food, Developed in Node.js with Postgr
 
 ### Installation
 
-Order Food requires [Node.js](https://nodejs.org/) v10+ to run.
-Order Food requires Postgres v11.4 to run.
-Order Food requires Nest.js v7+ to run.
+Order Food requires [Node.js](https://nodejs.org/) v10+, Postgres v11.4, Nest.js v7+ to run.
 
 Install the dependencies and devDependencies and start the server.
 ```sh
